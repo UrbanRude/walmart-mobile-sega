@@ -13,7 +13,6 @@ import { MatProgressBarModule} from '@angular/material';
 
 import { LoginPage } from '../pages/login/login';
 import { LocalStorageProvider } from '../providers/local-storage/local-storage';
-import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { LoginProvider } from '../providers/login/login';
 import { ConfigurationProvider } from '../providers/configuration/configuration';
 import { ConfigurationMockProvider } from '../mock/configuration-mock-provider';
@@ -61,7 +60,6 @@ export const MATERIAL_COMPONENTS = [
     ConsumeApiProvider,
     EventsManagerProvider,
     LocalStorageProvider,
-    NativePageTransitions,
     //LoginProvider,
     //ConfigurationProvider
     {

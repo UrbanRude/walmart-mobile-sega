@@ -9,45 +9,65 @@ page-login {
         margin-left: 10px;
     }
 
-    .img-sams {
-        width: 400px;
-        margin-top: 220px;
-        margin-left: 180px;
-    }
-
-    .img-sega {
-        width: 350px;
-        margin-top: 20px;
-        margin-left: 200px;
-    }
-
+    
     .title {
         font-size: 35px;
     }
-
+    
     .wrapper-controls-login{
         height: 100%;
         display: flex; 
         flex-direction: column;
         justify-content: flex-end;
     }
-
+    
     .label-select {
         color: white;
     }
-
+    
     .input-login {
         background-color: #123552;
         border-radius: 7px;
         color: white;
     }
-
+    
     ::-webkit-input-placeholder {
         color: white !important;
     }
-
+    
     .select-icon-inner {
         color: white !important;
     }
+    
+    
+    // CSS SEGA
+    .wrapper-imgs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .img-sams {
+        width: 45%;
+    }
+
+    .img-sega {
+        width: 40%;
+        margin-bottom: 20%;
+    }
+
+    @media (max-width: 320px) {
+
+        .img-sams {
+            width: 35%;
+        }
+
+        .img-sega {
+            width: 30%;
+            margin-bottom: 5%;
+        }
+      }
 
 }

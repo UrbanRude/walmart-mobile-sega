@@ -4,7 +4,6 @@ import { OnboardingPage } from '../onboarding/onboarding';
 import { LocalStorageProvider } from '../../providers/local-storage/local-storage';
 import { EventsManagerProvider } from '../../providers/events-manager/events-manager';
 import { ONBOARDING,KEY_LOCAL_STORAGE } from '../../environments/enviroments';
-import { NativePageTransitions,NativeTransitionOptions } from '@ionic-native/native-page-transitions'
 import { LoginProvider } from '../../providers/login/login';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ConfigurationProvider } from '../../providers/configuration/configuration';
@@ -34,7 +33,6 @@ export class LoginPage {
     public navParams: NavParams, 
     private local_storage: LocalStorageProvider,
     private events_manager: EventsManagerProvider,
-    private nativePageTransition:NativePageTransitions,
     private login_provider: LoginProvider,
     private fb: FormBuilder,
     private configuration_provider: ConfigurationProvider) {
@@ -101,10 +99,6 @@ export class LoginPage {
             this.events_manager.setIsLoadingEvent( false );
           } else{
             this.events_manager.setIsLoadingEvent( false );
-            let options: NativeTransitionOptions = {
-              direction:'left'
-            };
-            this.nativePageTransition.slide( options );
             this.navCtrl.setRoot( OnboardingPage );
           }
         });
