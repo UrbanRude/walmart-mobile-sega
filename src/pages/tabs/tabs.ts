@@ -12,7 +12,6 @@ import { Page4Page } from '../page4/page4';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
