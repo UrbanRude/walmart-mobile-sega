@@ -11,7 +11,6 @@ import { Page3Page } from '../page3/page3';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
