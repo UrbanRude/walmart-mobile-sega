@@ -92,15 +92,8 @@ export class LoginPage {
     this.login_provider
         .verifySupplier( userWalmart )
         .subscribe( (response:any) => {
-          this.local_storage.saveItem( KEY_LOCAL_STORAGE.TYPE_USER,response.businessResponse.data );
-          let statusOnboarding = this.local_storage.getItem(ONBOARDING);
-          if(statusOnboarding.view){ 
-            this.navCtrl.setRoot( TabsPage );
-            this.events_manager.setIsLoadingEvent( false );
-          } else{
-            this.events_manager.setIsLoadingEvent( false );
-            this.navCtrl.setRoot( OnboardingPage );
-          }
+          this.events_manager.setIsLoadingEvent( false );
+          this.navCtrl.setRoot( TabsPage );
         });
 
   }
