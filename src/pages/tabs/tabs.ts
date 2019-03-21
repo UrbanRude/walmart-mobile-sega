@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Events } from 'ionic-angular';
 import { Page1Page } from '../page1/page1';
 import { Page2Page } from '../page2/page2';
 import { Page3Page } from '../page3/page3';
@@ -22,12 +22,17 @@ export class TabsPage {
   tab2=Page2Page;
   tab3=Page3Page;
   tab4=Page4Page;
+  count: number = 5;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsPage');
+  }
+
+  public updateTabBadge(): void {
+    this.events.publish('cart:updated', ++this.count);
   }
 
 }
