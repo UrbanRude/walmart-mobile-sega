@@ -1,3 +1,30 @@
 page-page3 {
   
+    .wrapper-notification {
+        display: flex;
+        background-color: #7F7E7E;
+        border-radius: 7px;
+        padding: 15px;
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .circle-notification {
+        height: 4vh;
+        width: 4vh;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .wrapper-info {
+        width: 100%;
+        margin-left: 15px;
+    }
+
+    .wrapper-title-notification {
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
