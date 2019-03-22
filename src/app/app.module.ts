@@ -24,12 +24,17 @@ import { Page3Page } from '../pages/page3/page3';
 import { Page4Page } from '../pages/page4/page4';
 import { DetailNotificationPage } from '../pages/detail-notification/detail-notification';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+<<<<<<< HEAD
 import { CalendarModule } from 'ionic3-calendar-en';
 
 import { FormsModule } from '@angular/forms'
 import { BusinessComponent } from '../components/business/business';
 import { BusinessDetailComponent } from '../components/business-detail/business-detail';
 import { UserGoalsComponent } from '../components/user-goals/user-goals';
+=======
+import { LaunchNavigator } from '@ionic-native/launch-navigator';
+import { Geolocation } from '@ionic-native/geolocation';
+>>>>>>> launch-map
 
 
 export const MATERIAL_COMPONENTS = [
@@ -92,7 +97,9 @@ export const MATERIAL_COMPONENTS = [
     {
       useClass: ConfigurationMockProvider,
       provide:  ConfigurationProvider
-    }
+    },
+    LaunchNavigator,
+    Geolocation
   ]
 })
 export class AppModule {}
