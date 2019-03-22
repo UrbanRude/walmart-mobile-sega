@@ -14,7 +14,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Page2Page {
 
+  currentEvents = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.currentEvents = [
+      {
+        year: 2017,
+        month: 11,
+        date: 25
+      },
+      {
+        year: 2017,
+        month: 11,
+        date: 26
+      }
+    ];
   }
 
   ionViewDidLoad() {

@@ -24,6 +24,8 @@ import { Page3Page } from '../pages/page3/page3';
 import { Page4Page } from '../pages/page4/page4';
 import { DetailNotificationPage } from '../pages/detail-notification/detail-notification';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { CalendarModule } from 'ionic3-calendar-en';
+
 
 
 export const MATERIAL_COMPONENTS = [
@@ -47,7 +49,8 @@ export const MATERIAL_COMPONENTS = [
     MATERIAL_COMPONENTS,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    IonicImageViewerModule
+    IonicImageViewerModule,
+    CalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
