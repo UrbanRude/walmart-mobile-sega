@@ -4,6 +4,7 @@ import { DetailNotificationPage } from '../detail-notification/detail-notificati
 import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
 import { HomePage } from '../home/home';
 
+import { Geolocation } from '@ionic-native/geolocation';
 /**
  * Generated class for the Page3Page page.
  *
@@ -18,8 +19,14 @@ import { HomePage } from '../home/home';
 export class Page3Page {
 
   listDetailNotifications = [];
+  latitude:number ;
+  	longitude:number ;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private launchNavigator: LaunchNavigator,
+    private geolocation: Geolocation) {
 
     this.listDetailNotifications.push({
       idNd: 1,
@@ -58,6 +65,12 @@ export class Page3Page {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Page3Page');
+    this.geolocation.getCurrentPosition().then(position =>{
+      this.latitude = position.coords.latitude;
+      this.longitude = position.coords.longitude;
+    },error=>{
+      console.log('error',error);
+    });
   }
 
   notificationDetail(objectComplet){
@@ -69,17 +82,18 @@ export class Page3Page {
   detailNotification() {
     this.navCtrl.push( HomePage,{} );
   }
-  
-  clickNavigation() {
+
+  clickNavigation(){
     let options: LaunchNavigatorOptions = {
-      start: 'London, ON',
-      app: this.launchNavigator.APP.UBER
-    };
-    this.launchNavigator.navigate( 'Mexico', options )
-        .then( 
-          success => console.log( success ),
-          error => console.log( error )
-        );
-  }
+     app: this.launchNavigator.APP.GOOGLE_MAPS,
+              start:[this.latitude,this.longitude],
+       };
+   this.launchNavigator.navigate('London, ON',options)
+   .then(success =>{
+     console.log(success);
+   },error=>{
+     console.log(error);
+   });
+ }
 
 }

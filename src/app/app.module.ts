@@ -25,6 +25,7 @@ import { Page4Page } from '../pages/page4/page4';
 import { DetailNotificationPage } from '../pages/detail-notification/detail-notification';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
+import { Geolocation } from '@ionic-native/geolocation';
 
 
 export const MATERIAL_COMPONENTS = [
@@ -79,7 +80,8 @@ export const MATERIAL_COMPONENTS = [
       useClass: ConfigurationMockProvider,
       provide:  ConfigurationProvider
     },
-    LaunchNavigator
+    LaunchNavigator,
+    Geolocation
   ]
 })
 export class AppModule {}
