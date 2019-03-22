@@ -14,6 +14,8 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class Page4Page {
 
+  images = ['prom1.PNG', 'prom2.PNG', 'prom3.PNG'];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

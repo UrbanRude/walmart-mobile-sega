@@ -23,6 +23,7 @@ import { Page2Page } from '../pages/page2/page2';
 import { Page3Page } from '../pages/page3/page3';
 import { Page4Page } from '../pages/page4/page4';
 import { DetailNotificationPage } from '../pages/detail-notification/detail-notification';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 
 
 export const MATERIAL_COMPONENTS = [
@@ -45,7 +46,8 @@ export const MATERIAL_COMPONENTS = [
     BrowserAnimationsModule,
     MATERIAL_COMPONENTS,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
