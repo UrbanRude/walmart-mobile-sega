@@ -5,4 +5,14 @@ user-goals {
     .bigFont{ font-size: 50px; }
 
     .veryBigFont { font-size: 150px; }
+
+    @media (max-width: 320px) {
+
+        .midFont{ font-size: 12px; }
+
+        .bigFont{ font-size: 25px; }
+
+        .veryBigFont { font-size: 75px; }
+
+    }
 }

@@ -6,20 +6,25 @@
 			<ion-label><h2>{{business.id}} {{business.name | uppercase}}</h2></ion-label>
 		</ion-item>
 		<ion-item>
-			<ion-icon slot="start" name="alarm"></ion-icon>
-			<ion-label>{{ business.meetingDate }}</ion-label>
+			<ion-label>
+				<ion-icon name="alarm"></ion-icon>
+				<span> {{ business.meetingDate }}</span>
+			</ion-label>
 		</ion-item>
 		<ion-item>
-			<ion-icon slot="start" name="person"></ion-icon>
-			<ion-label>{{ business.owner }}</ion-label>
+			
+			<ion-label>
+				<ion-icon slot="start" name="person"></ion-icon> <span>{{ business.owner }}</span> </ion-label>
 		</ion-item>
 		<ion-item>
-			<ion-icon slot="start" name="call"></ion-icon>
-			<ion-label>{{ business.phone }}</ion-label>
+			
+			<ion-label>
+				<ion-icon slot="start" name="call"></ion-icon> <span>{{ business.phone }}</span> </ion-label>
 		</ion-item>
 		<ion-item (click)="openMap()">
-			<ion-icon slot="start" name="pin"></ion-icon>
-			<ion-label>{{ business.address }}</ion-label>
+			
+			<ion-label>
+				<ion-icon slot="start" name="pin"></ion-icon> <span>{{ business.address }}</span> </ion-label>
 		</ion-item>
 	</ion-list>
 </div>
