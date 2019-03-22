@@ -22,7 +22,7 @@ export class TabsPage {
   tab2=Page2Page;
   tab3=Page3Page;
   tab4=Page4Page;
-  count: number = 5;
+  count: number = 4;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
   }

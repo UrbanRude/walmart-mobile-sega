@@ -22,6 +22,8 @@ import { Page1Page } from '../pages/page1/page1';
 import { Page2Page } from '../pages/page2/page2';
 import { Page3Page } from '../pages/page3/page3';
 import { Page4Page } from '../pages/page4/page4';
+import { DetailNotificationPage } from '../pages/detail-notification/detail-notification';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
 
 
@@ -38,13 +40,15 @@ export const MATERIAL_COMPONENTS = [
     Page1Page,
     Page2Page,
     Page3Page,
-    Page4Page],
+    Page4Page,
+    DetailNotificationPage],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MATERIAL_COMPONENTS,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +59,8 @@ export const MATERIAL_COMPONENTS = [
     Page1Page,
     Page2Page,
     Page3Page,
-    Page4Page
+    Page4Page,
+    DetailNotificationPage
   ],
   providers: [
     StatusBar,

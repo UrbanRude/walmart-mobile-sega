@@ -8,76 +8,21 @@
 
 
 <ion-content padding>
-  <div class="wrapper-notification" (click)="detailNotification()">
+ 
+  <div 
+    *ngFor="let item  of listDetailNotifications"
+    class="wrapper-notification" 
+    (click)="notificationDetail( item )">
     <div class="circle-notification"></div>
     <div class="wrapper-info">
       <div class="wrapper-title-notification">
-        <span>Titulo notificacion</span>
-        <span> 11:00 </span>
+        <span> {{item.name}} </span>
+        <span>  {{item.hr}}  </span>
       </div>
-      <p>
-        Descripción de la notificación
-      </p>
-    </div>
-  </div>
-  <div class="wrapper-notification">
-    <div class="circle-notification"></div>
-    <div class="wrapper-info">
-      <div class="wrapper-title-notification">
-        <span>Titulo notificacion</span>
-        <span> 11:00 </span>
-      </div>
-      <p>
-        Descripción de la notificación
-      </p>
-    </div>
-  </div>
-  <div class="wrapper-notification">
-    <div class="circle-notification"></div>
-    <div class="wrapper-info">
-      <div class="wrapper-title-notification">
-        <span>Titulo notificacion</span>
-        <span> 11:00 </span>
-      </div>
-      <p>
-        Descripción de la notificación
-      </p>
-    </div>
-  </div>
-  <div class="wrapper-notification">
-    <div class="circle-notification"></div>
-    <div class="wrapper-info">
-      <div class="wrapper-title-notification">
-        <span>Titulo notificacion</span>
-        <span> 11:00 </span>
-      </div>
-      <p>
-        Descripción de la notificación
-      </p>
-    </div>
-  </div>
-  <div class="wrapper-notification">
-    <div class="circle-notification"></div>
-    <div class="wrapper-info">
-      <div class="wrapper-title-notification">
-        <span>Titulo notificacion</span>
-        <span> 11:00 </span>
-      </div>
-      <p>
-        Descripción de la notificación
-      </p>
-    </div>
-  </div>
-  <div class="wrapper-notification">
-    <div class="circle-notification"></div>
-    <div class="wrapper-info">
-      <div class="wrapper-title-notification">
-        <span>Titulo notificacion</span>
-        <span> 11:00 </span>
-      </div>
-      <p>
-        Descripción de la notificación
-      </p>
+      <br>
+      <span>
+          {{item.description}} 
+      </span>
     </div>
   </div>
 </ion-content>

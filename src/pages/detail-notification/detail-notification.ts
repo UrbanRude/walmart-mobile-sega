@@ -2,25 +2,28 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the Page4Page page.
+ * Generated class for the DetailNotificationPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @Component({
-  selector: 'page-page4',
-  templateUrl: 'page4.html',
+  selector: 'page-detail-notification',
+  templateUrl: 'detail-notification.html',
 })
-export class Page4Page {
+export class DetailNotificationPage {
 
-  images = ['prom1.PNG', 'prom2.PNG', 'prom3.PNG'];
+  detail = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    this.detail = navParams.get("detail");
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Page4Page');
+    console.log('ionViewDidLoad DetailNotificationPage');
   }
 
 }
