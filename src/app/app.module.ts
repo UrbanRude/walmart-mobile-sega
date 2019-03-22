@@ -25,6 +25,11 @@ import { Page4Page } from '../pages/page4/page4';
 import { DetailNotificationPage } from '../pages/detail-notification/detail-notification';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 
+import { FormsModule } from '@angular/forms'
+import { BusinessComponent } from '../components/business/business';
+import { BusinessDetailComponent } from '../components/business-detail/business-detail';
+import { UserGoalsComponent } from '../components/user-goals/user-goals';
+
 
 export const MATERIAL_COMPONENTS = [
   MatProgressBarModule
@@ -40,7 +45,11 @@ export const MATERIAL_COMPONENTS = [
     Page2Page,
     Page3Page,
     Page4Page,
-    DetailNotificationPage],
+    DetailNotificationPage,
+    BusinessComponent,
+    BusinessDetailComponent,
+    UserGoalsComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -48,6 +57,7 @@ export const MATERIAL_COMPONENTS = [
     HttpClientModule,
     IonicModule.forRoot(MyApp),
     IonicImageViewerModule
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -59,7 +69,10 @@ export const MATERIAL_COMPONENTS = [
     Page2Page,
     Page3Page,
     Page4Page,
-    DetailNotificationPage
+    DetailNotificationPage,
+    BusinessComponent,
+    BusinessDetailComponent,
+    UserGoalsComponent
   ],
   providers: [
     StatusBar,
