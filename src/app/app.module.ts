@@ -56,7 +56,7 @@ export const MATERIAL_COMPONENTS = [
     MATERIAL_COMPONENTS,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    IonicImageViewerModule
+    IonicImageViewerModule,
     FormsModule
   ],
   bootstrap: [IonicApp],
