@@ -1,0 +1,21 @@
+
+<user-goals></user-goals>
+
+<div><ion-label class="bigFont">Tu Agenda de Hoy</ion-label></div>
+<div><ion-label class="midFont">{{currentDate | date}}</ion-label></div>
+<div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ul class="heroes">
+          <li *ngFor="let business of businessArray" (click)="onSelect(business)" [class.selected]="business === selectedBusiness"><span class="badge">{{business.id}}</span> {{business.name}}</li>
+        </ul>
+      </ion-col>
+      <ion-col>
+          <business-detail [business]="selectedBusiness"></business-detail>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+

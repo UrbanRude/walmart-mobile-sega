@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { BusinessComponent } from  '../../components/business/business';
 
 /**
  * Generated class for the Page1Page page.
