@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Business } from '../../models/business';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
+import { Geolocation } from '@ionic-native/geolocation';
+
 /**
  * Generated class for the BusinessDetailComponent component.
  *
@@ -13,11 +16,32 @@ import { Business } from '../../models/business';
 export class BusinessDetailComponent {
 
   @Input() business: Business;
+  latitude: number;
+  longitude: number;
+    
+  constructor(private launchNavigator: LaunchNavigator, private geolocation: Geolocation) { }
 
-  constructor() { }
-
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad Page3Page');
+    this.geolocation.getCurrentPosition().then(position =>{
+      this.latitude = position.coords.latitude;
+      this.longitude = position.coords.longitude;
+    },error=>{
+      console.log('error',error);
+    });
+  }
+  
   openMap() {
-  	alert("Abrir mapa...")
+  	let options: LaunchNavigatorOptions = {
+      app: this.launchNavigator.APP.GOOGLE_MAPS,
+               start:[this.latitude,this.longitude],
+        };
+    this.launchNavigator.navigate('London, ON',options)
+    .then(success =>{
+      console.log(success);
+    },error=>{
+      console.log(error);
+    });
   }
   
 }
