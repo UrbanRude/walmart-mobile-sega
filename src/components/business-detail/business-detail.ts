@@ -17,14 +17,14 @@ export class BusinessDetailComponent {
 
   @Input() business: Business;
     
-  constructor(private launchNavigator: LaunchNavigator, private geolocation: Geolocation) { }
+  constructor(private launchNavigator: LaunchNavigator) { }
 
   ionViewDidLoad() {
     
     console.log('ionViewDidLoad Page3Page');
   }
   
-  openMap(latitude: number, longitude: number) {
+  openMap() {
   	let options: LaunchNavigatorOptions = {
       app: this.launchNavigator.APP.GOOGLE_MAPS
     };
