@@ -31,12 +31,12 @@ export class BusinessDetailComponent {
     });
   }
   
-  openMap() {
+  openMap(latitude: number, longitude: number) {
   	let options: LaunchNavigatorOptions = {
       app: this.launchNavigator.APP.GOOGLE_MAPS,
                start:[this.latitude,this.longitude],
         };
-    this.launchNavigator.navigate('London, ON',options)
+    this.launchNavigator.navigate( [this.business.latitude, this.business.longitude], options )
     .then(success =>{
       console.log(success);
     },error=>{

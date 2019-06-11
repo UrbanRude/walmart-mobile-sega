@@ -8,4 +8,6 @@ export class Business {
 	owner: string;
 	phone: string;
 	address: string;
+	latitude: number;
+	longitude: number;
 }

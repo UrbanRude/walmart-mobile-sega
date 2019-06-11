@@ -14,7 +14,7 @@ import { BUSINESS_ARRAY } from '../../mock/mock-business';
 })
 export class BusinessComponent {
 
-  business: Business = { id: 3680, name: 'Abarrotes Lupita', meetingDate: "Hoy, 11:00 am", owner: "Antonio L\u00F3pez Santana", phone: "(55) 1320 8821", address: "Girasoles 23, Los Tules Tultitl\u00E1n, M\u00E9xico. 53980" };
+  business: Business = { id: 3680, name: 'Abarrotes Lupita', meetingDate: "Hoy, 11:00 am", owner: "Antonio L\u00F3pez Santana", phone: "(55) 1320 8821", address: "Av Ejército Nacional 516 Chapultepec Morales, Polanco IV Secc 11520 Ciudad de México, CDMX", latitude: 19.437748, longitude: -99.190534 };
   
   businessArray = BUSINESS_ARRAY;
   
