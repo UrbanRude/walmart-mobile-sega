@@ -16,32 +16,24 @@ import { Geolocation } from '@ionic-native/geolocation';
 export class BusinessDetailComponent {
 
   @Input() business: Business;
-  latitude: number;
-  longitude: number;
     
   constructor(private launchNavigator: LaunchNavigator, private geolocation: Geolocation) { }
 
   ionViewDidLoad() {
+    
     console.log('ionViewDidLoad Page3Page');
-    this.geolocation.getCurrentPosition().then(position =>{
-      this.latitude = position.coords.latitude;
-      this.longitude = position.coords.longitude;
-    },error=>{
-      console.log('error',error);
-    });
   }
   
   openMap(latitude: number, longitude: number) {
   	let options: LaunchNavigatorOptions = {
-      app: this.launchNavigator.APP.GOOGLE_MAPS,
-               start:[this.latitude,this.longitude],
-        };
+      app: this.launchNavigator.APP.GOOGLE_MAPS
+    };
     this.launchNavigator.navigate( [this.business.latitude, this.business.longitude], options )
-    .then(success =>{
-      console.log(success);
-    },error=>{
-      console.log(error);
-    });
+      .then(success =>{
+        console.log(success);
+      },error=>{
+        console.log(error);
+      });
   }
   
 }
