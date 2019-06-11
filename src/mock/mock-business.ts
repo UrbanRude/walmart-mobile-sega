@@ -4,7 +4,7 @@ export const BUSINESS_ARRAY: Business[] = [
 	
   { id: 3680, name: 'Abarrotes Lupita', meetingDate: "Hoy, 11:00 am", owner: "Antonio L\u00F3pez Santana", phone: "(55) 1320 8821", address: "Ej\u00E9rcito Nacional 516, Polanco 11520, CDMX", latitude: 19.437748, longitude: -99.190534 },
   { id: 3681, name: 'Carnicer\u00EDa Alamos', meetingDate: "Hoy, 11:30 am", owner: "Antonio L\u00F3pez Santana", phone: "(55) 1320 8821", address: "Perif. 36, Chapultepec, 11000 Ciudad de M\u00E9xico, CDMX", latitude: 19.429274, longitude: -99.205358 },
-  { id: 3682, name: 'Papeler\u00EDa Torres', meetingDate: "Hoy, 12:00 am", owner: "Antonio L\u00F3pez Santana", phone: "(55) 1320 8821", address: "Av. Paseo de la Reforma, 06600 Ciudad de M\u00E9xico, CDMX", latitude: 19.424945, longitude: -99.171176 },
+  { id: 3682, name: 'Papeler\u00EDa Torres', meetingDate: "Hoy, 12:00 am", owner: "Antonio L\u00F3pez Santana", phone: "(55) 1320 8821", address: "Av. Paseo de la Reforma, 06600, CDMX", latitude: 19.424945, longitude: -99.171176 },
   { id: 3683, name: 'Abarrotes Don Miguel', meetingDate: "Hoy, 12:30 am", owner: "Antonio L\u00F3pez Santana", phone: "(55) 1320 8821", address: "Ver\u00F3nica Anzures, 11300 Ciudad de M\u00E9xico, CDMX", latitude: 19.432732, longitude: -99.172426 },
   { id: 3684, name: 'Mini S\u00FAper La Central', meetingDate: "Hoy, 01:00 am", owner: "Antonio L\u00F3pez Santana", phone: "(55) 1320 8821", address: "Av. San Cosme 71, Sta Mar\u00EDa la Ribera, 06400, CDMX", latitude: 19.441873, longitude: -99.160238 },
   { id: 3685, name: 'Abarrotes Gloria', meetingDate: "Hoy, 01:30 pm", owner: "Antonio L\u00F3pez Santana", phone: "(55) 1320 8821", address: "Fray Servando Teresa de Mier 3, Centro, 06800, CDMX", latitude: 19.424496, longitude: -99.142257 },
